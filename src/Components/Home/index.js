@@ -229,7 +229,7 @@ function Home(props) {
           required
         />
       </div>
-      <div className="btn-grp col-lg-4 col-md-6 col-sm-8 col-xs-12 custom-margin">
+      <div className="btn-grp col-lg-4 col-md-6 col-sm-8 col-xs-12">
         <button
           className="btn btn-primary"
           disabled={show}
