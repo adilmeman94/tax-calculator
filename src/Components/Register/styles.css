@@ -1,6 +1,5 @@
 .register-page {
-  display: block;
-  align-items: center;
-  justify-items: center;
   margin: auto;
+  height: 100%;
+  background-color: white;
 }

@@ -38,6 +38,10 @@
 }
 .custom-margin {
   width: 80%;
+  margin: auto;
+  display: block;
+  justify-content: center;
+  align-content: center;
 }
 .margin-auth {
   flex-direction: row-reverse;

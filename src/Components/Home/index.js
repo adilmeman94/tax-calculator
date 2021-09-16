@@ -117,7 +117,7 @@ function Home(props) {
           </p>
         </div>
       )}
-      <div className="salary-component col-lg-4 col-md-6 col-sm-8 col-xs-12 custom-margin">
+      <div className="salary-component col-lg-6 col-md-6 col-sm-8 col-xs-12">
         <label className="form-label label2">Add Salary Components</label>
         <label className="form-label label1">Basic Salary (Annual)</label>
         <input
@@ -165,7 +165,7 @@ function Home(props) {
         />
       </div>
 
-      <div className="salary-component col-lg-4 col-md-6 col-sm-8 col-xs-12 custom-margin">
+      <div className="salary-component col-lg-6 col-md-6 col-sm-8 col-xs-12">
         <label className="form-label label2">Add Deduction Components</label>
         <label className="form-label label1">
           Investments under section 80C

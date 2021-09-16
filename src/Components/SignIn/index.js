@@ -36,11 +36,11 @@ function SignIn(props) {
   };
 
   return (
-    <div>
+    <div className="custom-margin">
       <h3 style={{ textAlign: "center", marginTop: "5%", marginBottom: "2%" }}>
         Login
       </h3>
-      <div className="register-page col-lg-6 col-md-8 col-sm-10 col-xs-12 custom-margin">
+      <div className="register-page col-lg-6 col-md-8 col-sm-10 col-xs-12">
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label className="form-label">Email address</label>
