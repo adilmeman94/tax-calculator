@@ -32,7 +32,6 @@ function Home(props) {
       const apphra = 0.4 * Basic + (Rent - 0.1 * Basic) + 1 * HRA;
       setAppHRA(apphra);
     }
-    console.log(AppHRA, "appHra");
   };
 
   const goToPreview = (e) => {
@@ -94,7 +93,6 @@ function Home(props) {
         },
       })
       .then((response) => {
-        console.log(response);
         setShow(true);
       })
       .catch((error) => {
@@ -109,7 +107,7 @@ function Home(props) {
         <h3>Calculate Your Texable Income </h3>
       </div>
       {TaxIncome && (
-        <div className="result col-lg-4 col-md-6 col-sm-8 ">
+        <div className="result col-lg-4 col-md-6 col-sm-8">
           <h4>
             {name}'s Taxable Income is {TaxIncome} Rs*
           </h4>
@@ -119,7 +117,7 @@ function Home(props) {
           </p>
         </div>
       )}
-      <div className="salary-component col-lg-4 col-md-6 col-sm-8 ">
+      <div className="salary-component col-lg-4 col-md-6 col-sm-8 col-xs-12 custom-margin">
         <label className="form-label label2">Add Salary Components</label>
         <label className="form-label label1">Basic Salary (Annual)</label>
         <input
@@ -167,7 +165,7 @@ function Home(props) {
         />
       </div>
 
-      <div className="salary-component col-lg-4 col-md-6 col-sm-8">
+      <div className="salary-component col-lg-4 col-md-6 col-sm-8 col-xs-12 custom-margin">
         <label className="form-label label2">Add Deduction Components</label>
         <label className="form-label label1">
           Investments under section 80C
@@ -183,7 +181,7 @@ function Home(props) {
           required
         />
         <label className="form-label label1">
-          Actual Rent paid by user (Annual){" "}
+          Actual Rent paid by user (Annual)
         </label>
         <input
           type="number"
@@ -196,7 +194,7 @@ function Home(props) {
           required
         />
         <label className="form-label label1">
-          Mediclaim policy premium paid by user (Annual)
+          Mediclaim policy premium paid by user
         </label>
         <input
           type="number"
@@ -231,7 +229,7 @@ function Home(props) {
           required
         />
       </div>
-      <div className="btn-grp col-lg-4 col-md-6 col-sm-8 ">
+      <div className="btn-grp col-lg-4 col-md-6 col-sm-8 col-xs-12 custom-margin">
         <button
           className="btn btn-primary"
           disabled={show}
@@ -243,7 +241,7 @@ function Home(props) {
           className="btn btn-primary second-btn"
           onClick={(e) => calculateTaxIncome(e)}
         >
-          Show Taxable Income
+          Taxable Income
         </button>
         <button
           className="btn btn-primary second-btn"

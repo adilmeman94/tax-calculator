@@ -7,6 +7,7 @@ function SignIn(props) {
   const { setName } = props;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loader, setLoader] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -14,6 +15,7 @@ function SignIn(props) {
       email: email,
       password: password,
     };
+    setLoader(true);
     axios
       .post(`https://jfbackend.herokuapp.com/login`, reqBody)
       .then((response) => {
@@ -23,6 +25,7 @@ function SignIn(props) {
         localStorage.setItem("id", response.data.userId);
         const Name = localStorage.getItem("name");
         setName(Name);
+        setLoader(false);
         alert(response.data.message);
         history.push("/home");
       })
@@ -37,7 +40,7 @@ function SignIn(props) {
       <h3 style={{ textAlign: "center", marginTop: "5%", marginBottom: "2%" }}>
         Login
       </h3>
-      <div className="register-page col-lg-6 col-md-8 col-sm-10">
+      <div className="register-page col-lg-6 col-md-8 col-sm-10 col-xs-12 custom-margin">
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label className="form-label">Email address</label>
@@ -66,7 +69,7 @@ function SignIn(props) {
             />
           </div>
           <button type="submit" className="btn btn-primary">
-            SignIn
+            {loader ? "Loading..." : "SignIn"}
           </button>
         </form>
       </div>

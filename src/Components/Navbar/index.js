@@ -60,7 +60,7 @@ function Navbar(props) {
             </li>
           </ul>
         </div>
-        <div className="collapse navbar-collapse" id="account">
+        <div className="collapse navbar-collapse margin-auth" id="account">
           {name === null ? (
             <ul className="navbar-nav text-center">
               <li className="nav-item ">
@@ -85,12 +85,16 @@ function Navbar(props) {
               >
                 {name}
               </button>
-              <ul
-                className="dropdown-menu"
-                aria-labelledby="dropdownMenuButton1"
-              >
-                <li onClick={Logout}>Logout</li>
-              </ul>
+              <div className="dropdown-menu dropdown-menu-right bg-dark text-center">
+                <button
+                  type="submit"
+                  className="btn text-light"
+                  aria-labelledby="dropdownMenuButton1"
+                  onClick={Logout}
+                >
+                  Logout
+                </button>
+              </div>
             </div>
           )}
         </div>

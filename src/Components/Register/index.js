@@ -9,6 +9,7 @@ function Register() {
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [loader, setLoader] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -18,9 +19,11 @@ function Register() {
       email: email,
       password: password,
     };
+    setLoader(true);
     axios
       .post(`https://jfbackend.herokuapp.com/signup`, reqBody)
       .then((response) => {
+        setLoader(false);
         alert(response.data.message);
         history.push("/signin");
       })
@@ -34,7 +37,7 @@ function Register() {
       <h3 style={{ textAlign: "center", marginTop: "5%", marginBottom: "2%" }}>
         Register
       </h3>
-      <div className="register-page col-lg-6 col-md-8 col-sm-10">
+      <div className="register-page col-lg-6 col-md-8 col-sm-10 col-xs-12 custom-margin">
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label className="form-label">FirstName</label>
@@ -87,7 +90,7 @@ function Register() {
             />
           </div>
           <button type="submit" className="btn btn-primary">
-            Register
+            {loader ? "Loading..." : "Register"}
           </button>
         </form>
       </div>

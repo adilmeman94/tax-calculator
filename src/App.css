@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+.custom-margin {
+  width: 80%;
+}
+.margin-auth {
+  flex-direction: row-reverse;
+}
